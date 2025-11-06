@@ -1,1 +1,4 @@
+User-agent: *
+Allow: /
 
+Sitemap: https://resilience-inc-global.github.io/website/sitemap.xml
