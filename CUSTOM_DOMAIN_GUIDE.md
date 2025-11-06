@@ -2,7 +2,7 @@
 
 ## 🌐 Using Your Own Domain Name
 
-If you want to use a custom domain (like `resilience-inc.com` or `www.resilience-inc.com`) instead of the GitHub Pages URL, follow these steps.
+If you want to use a custom domain (like `resilience-inc.global` or `www.resilience-inc.global`) instead of the GitHub Pages URL, follow these steps.
 
 -----
 
@@ -29,7 +29,7 @@ Go to your domain provider’s DNS management page and add these records:
 
 - **Type:** CNAME
 - **Host/Name:** www
-- **Value/Points to:** YOUR_USERNAME.github.io
+- **Value/Points to:** resilience-inc-global.github.io
 - **TTL:** 3600 (or default)
 
 **A Records for root domain (optional redirect):**
@@ -69,13 +69,13 @@ Add 4 A records:
 **For www subdomain:**
 
 ```
-www.resilience-inc.com
+www.resilience-inc.global
 ```
 
 **For apex domain:**
 
 ```
-resilience-inc.com
+resilience-inc.global
 ```
 
 **Important:** Only include ONE domain name, nothing else!
