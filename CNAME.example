@@ -1,1 +1,43 @@
+# CNAME File for Custom Domain
 
+# 
+
+# Rename this file to “CNAME” (without .example extension) and replace
+
+# the content with your custom domain name.
+
+# 
+
+# Example:
+
+# resilience-inc.global
+
+# 
+
+# OR with www:
+
+# www.resilience-inc.global
+
+# 
+
+# Then configure your DNS provider with:
+
+# - CNAME record: www -> resilience-inc.github.io
+
+# - A records for apex domain (if not using www):
+
+# 185.199.108.153
+
+# 185.199.109.153
+
+# 185.199.110.153
+
+# 185.199.111.153
+
+# 
+
+# After setup, enable HTTPS in GitHub Pages settings
+
+# REMOVE THIS COMMENT AND ADD YOUR DOMAIN BELOW:
+
+resilience-inc.global
