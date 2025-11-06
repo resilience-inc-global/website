@@ -4,7 +4,7 @@ Professional website for Willem van Heemstra’s cloud and security engineering 
 
 ## 🌐 Live Site
 
-Once deployed: `https://yourusername.github.io/resilience-inc-global/`
+Once deployed: `https://resilience-inc-global.github.io/website/`
 
 ## 📋 Features
 
@@ -19,15 +19,15 @@ Once deployed: `https://yourusername.github.io/resilience-inc-global/`
 
 ### 1. Create GitHub Repository
 
-1. Go to [GitHub](https://github.com) and create a new repository named `resilience-inc`
+1. Go to [GitHub](https://github.com) and create a new repository named `website`
 1. Make it public (required for free GitHub Pages)
 1. Don’t initialize with README (we already have one)
 
 ### 2. Upload Files
 
 ```bash
-# In your terminal, navigate to the resilience-inc folder
-cd resilience-inc
+# In your terminal, navigate to the website folder
+cd website
 
 # Initialize git
 git init
@@ -39,7 +39,7 @@ git add .
 git commit -m "Initial commit - Resilience Inc website"
 
 # Add your GitHub repository as remote (replace YOUR_USERNAME)
-git remote add origin https://github.com/YOUR_USERNAME/resilience-inc.git
+git remote add origin https://github.com/resilience-inc-global/website.git
 
 # Push to GitHub
 git branch -M main
@@ -52,7 +52,7 @@ git push -u origin main
 1. Click **Settings** → **Pages**
 1. Under “Build and deployment”:
 - Source: Select **GitHub Actions**
-1. Your site will be available at: `https://YOUR_USERNAME.github.io/resilience-inc/`
+1. Your site will be available at: `https://resilience-inc-glonal.github.io/website/`
 
 ### 4. Configure Contact Form
 
@@ -88,13 +88,13 @@ The contact form uses Formspree. To set it up:
 In `contact.html`, line 122, update the URL:
 
 ```html
-<input type="hidden" name="_next" value="https://YOUR_USERNAME.github.io/resilience-inc/thank-you.html">
+<input type="hidden" name="_next" value="https://resilience-inc-global.github.io/website/thank-you.html">
 ```
 
 ## 📁 Project Structure
 
 ```
-resilience-inc/
+website/
 ├── .github/
 │   └── workflows/
 │       └── deploy.yml          # GitHub Actions deployment
@@ -189,7 +189,7 @@ To use your own domain (e.g., resilience-inc.com):
    resilience-inc.com
    ```
 1. Configure DNS with your provider:
-- Add CNAME record: `www` → `YOUR_USERNAME.github.io`
+- Add CNAME record: `www` → `resilience-inc-global.github.io`
 - Add A records for apex domain to GitHub IPs:
   - 185.199.108.153
   - 185.199.109.153
