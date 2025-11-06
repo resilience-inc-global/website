@@ -172,7 +172,7 @@ Add the tracking code to **all three HTML files** just before the closing `</hea
 
 1. Upload your updated files to GitHub
 1. Visit your live website
-1. Go to Google Analytics → **Reports** → **Realtime**
+1. Go to Google Analytics → **[Reports](https://tagassistant.google.com/?hl=en-GB&utm_source=gtm#/?id=G-GSKVCK6F2F)** → **Realtime**
 1. You should see yourself as an active user!
 
 ### 🔍 Finding Your Measurement ID Later
