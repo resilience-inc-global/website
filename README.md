@@ -180,13 +180,13 @@ php -S localhost:8000
 
 ## 🌍 Custom Domain (Optional)
 
-To use your own domain (e.g., resilience-inc.com):
+To use your own domain (e.g., resilience-inc.global):
 
 1. Buy domain from provider (Namecheap, Google Domains, etc.)
 1. Create `CNAME` file in root directory with your domain:
    
    ```
-   resilience-inc.com
+   resilience-inc.global
    ```
 1. Configure DNS with your provider:
 - Add CNAME record: `www` → `resilience-inc-global.github.io`
