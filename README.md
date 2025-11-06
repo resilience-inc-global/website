@@ -4,7 +4,7 @@ Professional website for Willem van Heemstra’s cloud and security engineering 
 
 ## 🌐 Live Site
 
-Once deployed: `https://yourusername.github.io/resilience-inc/`
+Once deployed: `https://yourusername.github.io/resilience-inc-global/`
 
 ## 📋 Features
 
