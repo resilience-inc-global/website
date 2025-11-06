@@ -52,7 +52,7 @@ git push -u origin main
 1. Click **Settings** → **Pages**
 1. Under “Build and deployment”:
 - Source: Select **GitHub Actions**
-1. Your site will be available at: `https://resilience-inc-glonal.github.io/website/`
+1. Your site will be available at: `https://resilience-inc-global.github.io/website/`
 
 ### 4. Configure Contact Form
 
@@ -257,4 +257,4 @@ For questions about this website:
 
 **Built with:** HTML5, CSS3, JavaScript, GitHub Pages, Formspree
 
-**Last Updated:** November 2024
+**Last Updated:** November 2025
