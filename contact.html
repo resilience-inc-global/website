@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Resilience Inc for Cloud & Security Engineering services">
+    <title>Contact - Resilience Inc</title>
+
+
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="index.html"><h1>Resilience Inc</h1></a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="contact.html" class="btn-primary">Get in Touch</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+
+<!-- Contact Hero -->
+<section class="contact-hero">
+    <div class="container">
+        <h1>Get in Touch</h1>
+        <p>Tell me what's keeping you up at night, and let's see if I can help.</p>
+        <p class="response-time">I'll reply within 48 hours with either "Sorry, not a fit" or "Let's schedule a technical call."</p>
+    </div>
+</section>
+
+<!-- Contact Form -->
+<section class="contact-form-section">
+    <div class="container">
+        <div class="form-wrapper">
+            <form id="contact-form" action="https://formspree.io/f/xanyrgov" method="POST" class="contact-form">
+                <!-- Formspree honeypot spam protection -->
+                <input type="text" name="_gotcha" style="display:none">
+                
+                <!-- Name -->
+                <div class="form-group">
+                    <label for="name">Your Name *</label>
+                    <input type="text" id="name" name="name" required placeholder="John Smith">
+                </div>
+
+                <!-- Email -->
+                <div class="form-group">
+                    <label for="email">Your Email *</label>
+                    <input type="email" id="email" name="email" required placeholder="john@company.com">
+                </div>
+
+                <!-- Company -->
+                <div class="form-group">
+                    <label for="company">Company</label>
+                    <input type="text" id="company" name="company" placeholder="Your Company Ltd">
+                </div>
+
+                <!-- Phone -->
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+31 6 12345678">
+                </div>
+
+                <!-- Service Interest -->
+                <div class="form-group">
+                    <label for="service">What are you interested in? *</label>
+                    <select id="service" name="service" required>
+                        <option value="">Please select...</option>
+                        <option value="security">Security Audit & Hardening</option>
+                        <option value="cloud">Cloud Infrastructure Setup</option>
+                        <option value="devops">DevOps Pipeline Optimization</option>
+                        <option value="other">Other / Not sure yet</option>
+                    </select>
+                </div>
+
+                <!-- Current Situation -->
+                <div class="form-group">
+                    <label for="situation">What's driving you mental right now? *</label>
+                    <textarea id="situation" name="situation" rows="4" required placeholder="Tell me about your current pain points, what's broken, or what's keeping you up at night..."></textarea>
+                    <small>Be as specific as you can - it helps me understand if I'm the right fit.</small>
+                </div>
+
+                <!-- Tech Stack -->
+                <div class="form-group">
+                    <label for="tech-stack">What's your current tech stack?</label>
+                    <textarea id="tech-stack" name="tech-stack" rows="3" placeholder="e.g., Azure, AWS, Jenkins, Docker, Kubernetes, etc."></textarea>
+                    <small>This helps me prepare for our call</small>
+                </div>
+
+                <!-- Timeline -->
+                <div class="form-group">
+                    <label for="timeline">When do you need help?</label>
+                    <select id="timeline" name="timeline">
+                        <option value="">Please select...</option>
+                        <option value="urgent">Urgent (within 2 weeks)</option>
+                        <option value="soon">Soon (within 1-2 months)</option>
+                        <option value="planning">Just planning ahead</option>
+                    </select>
+                </div>
+
+                <!-- Budget -->
+                <div class="form-group">
+                    <label for="budget">Budget range (optional)</label>
+                    <select id="budget" name="budget">
+                        <option value="">Prefer not to say</option>
+                        <option value="under-5k">Under €5,000</option>
+                        <option value="5k-15k">€5,000 - €15,000</option>
+                        <option value="15k-50k">€15,000 - €50,000</option>
+                        <option value="over-50k">Over €50,000</option>
+                    </select>
+                </div>
+
+                <!-- How did you hear -->
+                <div class="form-group">
+                    <label for="referral">How did you hear about me?</label>
+                    <input type="text" id="referral" name="referral" placeholder="LinkedIn, Google, Referral, etc.">
+                </div>
+
+                <!-- Hidden field for form submissions tracking -->
+                <input type="hidden" name="_subject" value="New Enquiry from Resilience Inc Website">
+                <input type="hidden" name="_next" value="https://yourusername.github.io/resilience-inc/thank-you.html">
+
+                <!-- Submit Button -->
+                <div class="form-group">
+                    <button type="submit" class="btn-primary btn-large">Send Enquiry</button>
+                </div>
+
+                <!-- Form Status -->
+                <div id="form-status"></div>
+            </form>
+
+            <!-- Alternative Contact -->
+            <div class="alternative-contact">
+                <h3>Prefer to email directly?</h3>
+                <p>You can also reach me at: <a href="mailto:wvanheemstra@icloud.com">wvanheemstra@icloud.com</a></p>
+                <p class="contact-note">Available for projects across UK and Europe. Fluent in English, Dutch, and German.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Resilience Inc</h3>
+                <p>Cloud & Security Engineering</p>
+            </div>
+            <div class="footer-contact">
+                <p>Eersel, Netherlands (near Eindhoven)</p>
+                <p>Available for projects in UK and Europe</p>
+                <p><a href="mailto:wvanheemstra@icloud.com">wvanheemstra@icloud.com</a></p>
+            </div>
+            <div class="footer-links">
+                <a href="index.html#services">Services</a>
+                <a href="index.html#about">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Resilience Inc. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>
