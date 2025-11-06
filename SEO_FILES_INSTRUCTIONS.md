@@ -10,16 +10,16 @@ Both files need your **GitHub username** to work properly.
 Replace `YOUR_USERNAME` with your actual GitHub username.
 
 **Example:**
-If your GitHub username is `willemvh`, change:
+If your GitHub username is `resilience-inc-global`, change:
 
 ```
-Sitemap: https://YOUR_USERNAME.github.io/resilience-inc/sitemap.xml
+Sitemap: https://YOUR_USERNAME.github.io/website/sitemap.xml
 ```
 
 to:
 
 ```
-Sitemap: https://willemvh.github.io/resilience-inc/sitemap.xml
+Sitemap: https://resilience-inc-global.github.io/website/sitemap.xml
 ```
 
 **Where to put it:**
@@ -33,16 +33,16 @@ Place `robots.txt` in the **root** of your repository (same level as index.html)
 Replace `YOUR_USERNAME` with your actual GitHub username in all 3 locations.
 
 **Example:**
-If your GitHub username is `willemvh`, change:
+If your GitHub username is `resilience-inc-global`, change:
 
 ```xml
-<loc>https://YOUR_USERNAME.github.io/resilience-inc/</loc>
+<loc>https://YOUR_USERNAME.github.io/website/</loc>
 ```
 
 to:
 
 ```xml
-<loc>https://willemvh.github.io/resilience-inc/</loc>
+<loc>https://resilience-inc-global.github.io/website/</loc>
 ```
 
 **Do this for all 3 URLs in the file:**
@@ -74,11 +74,11 @@ Place `sitemap.xml` in the **root** of your repository (same level as index.html
 ## ✅ Quick Checklist
 
 - [ ] Download both files
-- [ ] Replace `YOUR_USERNAME` with your GitHub username
+- [ ] Replace `YOUR_USERNAME` with your GitHub username (here: resilience-inc-global)
 - [ ] Upload both files to the root of your repository
 - [ ] Verify they’re accessible:
-  - `https://YOUR_USERNAME.github.io/resilience-inc/robots.txt`
-  - `https://YOUR_USERNAME.github.io/resilience-inc/sitemap.xml`
+  - `https://YOUR_USERNAME.github.io/website/robots.txt`
+  - `https://YOUR_USERNAME.github.io/website/sitemap.xml`
 
 -----
 
