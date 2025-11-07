@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,88 +6,119 @@
     <meta name="description" content="Thank you for contacting Resilience Inc">
     <title>Thank You - Resilience Inc</title>
 
-<link rel="icon" type="image/svg+xml" href="favicon.svg">
-<link rel="stylesheet" href="assets/css/style.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif']
+                    },
+                    colors: {
+                        brand: {
+                            DEFAULT: '#2563eb',
+                            dark: '#1e40af',
+                            light: '#3b82f6'
+                        }
+                    }
+                }
+            },
+            plugins: [tailwindcssForms]
+        };
+    </script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
 
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-GSKVCK6F2F"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-GSKVCK6F2F');
-</script>
-    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GSKVCK6F2F"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-GSKVCK6F2F');
+    </script>
 </head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-brand">
-                <a href="index.html"><h1>Resilience Inc</h1></a>
+<body class="bg-white font-sans text-slate-800 antialiased">
+    <header class="sticky top-0 z-50 bg-white/90 shadow-sm backdrop-blur">
+        <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 lg:px-8">
+            <a href="index.html" class="text-lg font-semibold tracking-tight text-brand transition hover:text-brand-dark">Resilience Inc</a>
+            <div class="hidden flex-col gap-4 md:flex md:flex-row md:items-center md:gap-8" data-nav-menu>
+                <a href="index.html#services" class="text-sm font-medium text-slate-600 transition hover:text-brand">Services</a>
+                <a href="index.html#about" class="text-sm font-medium text-slate-600 transition hover:text-brand">About</a>
+                <a href="contact.html" class="inline-flex items-center justify-center rounded-lg bg-brand px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-brand-dark">Get in Touch</a>
             </div>
-            <ul class="nav-menu">
-                <li><a href="index.html#services">Services</a></li>
-                <li><a href="index.html#about">About</a></li>
-                <li><a href="contact.html" class="btn-primary">Get in Touch</a></li>
-            </ul>
-        </div>
-    </nav>
-
-<!-- Thank You Section -->
-<section class="thank-you-section">
-    <div class="container">
-        <div class="thank-you-content">
-            <div class="success-icon">✓</div>
-            <h1>Message Received!</h1>
-            <p class="thank-you-message">Thanks for reaching out. I've received your enquiry and will review it shortly.</p>
-            
-            <div class="next-steps">
-                <h2>What happens next?</h2>
-                <ol>
-                    <li>I'll review your message and tech stack within 48 hours</li>
-                    <li>You'll get a reply with either "Sorry, not a fit" or "Let's schedule a call"</li>
-                    <li>If it's a good fit, we'll arrange a technical discovery call to discuss your needs</li>
-                </ol>
-            </div>
-
-            <div class="thank-you-actions">
-                <a href="index.html" class="btn-primary">Back to Home</a>
-                <p class="contact-info">In the meantime, you can reach me directly at <a href="mailto:wvanheemstra@icloud.com">wvanheemstra@icloud.com</a></p>
+            <button type="button" class="inline-flex items-center justify-center rounded-md border border-slate-200 p-2 text-slate-700 transition hover:border-brand hover:text-brand md:hidden" aria-label="Toggle navigation" aria-controls="mobile-navigation" aria-expanded="false" data-nav-toggle>
+                <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" data-menu-open>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 7h16M4 12h16M4 17h16" />
+                </svg>
+                <svg class="hidden h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" data-menu-close>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 6l12 12M18 6l-12 12" />
+                </svg>
+            </button>
+        </nav>
+        <div class="md:hidden" data-nav-container>
+            <div id="mobile-navigation" class="hidden border-t border-slate-200 bg-white px-6 pb-6 pt-2" data-nav-menu-mobile>
+                <div class="flex flex-col gap-3">
+                    <a href="index.html#services" class="rounded-md px-3 py-2 text-sm font-medium text-slate-700 transition hover:bg-slate-100 hover:text-brand">Services</a>
+                    <a href="index.html#about" class="rounded-md px-3 py-2 text-sm font-medium text-slate-700 transition hover:bg-slate-100 hover:text-brand">About</a>
+                    <a href="contact.html" class="inline-flex items-center justify-center rounded-lg bg-brand px-3 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-brand-dark">Get in Touch</a>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </header>
 
-<!-- Footer -->
-<footer class="footer">
-    <div class="container">
-        <div class="footer-content">
-            <div class="footer-brand">
-                <h3>Resilience Inc</h3>
-                <p>Cloud & Security Engineering</p>
+    <main>
+        <section class="bg-slate-50 py-24">
+            <div class="mx-auto max-w-4xl px-6 lg:px-8">
+                <div class="rounded-3xl bg-white p-10 text-center shadow-2xl shadow-indigo-200/30" data-animate>
+                    <div class="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-emerald-500 text-3xl font-semibold text-white">✓</div>
+                    <h1 class="mt-6 text-4xl font-bold text-slate-900 sm:text-5xl">Message Received!</h1>
+                    <p class="mt-4 text-lg text-slate-600">Thanks for reaching out. I've received your enquiry and will review it shortly.</p>
+
+                    <div class="mt-10 rounded-2xl border border-slate-100 bg-slate-50 p-8 text-left" data-animate>
+                        <h2 class="text-2xl font-semibold text-slate-900 text-center">What happens next?</h2>
+                        <ol class="mt-6 list-decimal space-y-3 text-base text-slate-600 marker:text-brand" style="padding-left:1.5rem;">
+                            <li>I'll review your message and tech stack within 48 hours.</li>
+                            <li>You'll get a reply with either "Sorry, not a fit" or "Let's schedule a call".</li>
+                            <li>If it's a good fit, we'll arrange a technical discovery call to discuss your needs.</li>
+                        </ol>
+                    </div>
+
+                    <div class="mt-10 flex flex-col items-center gap-4" data-animate>
+                        <a href="index.html" class="inline-flex items-center justify-center rounded-xl bg-brand px-6 py-3 text-base font-semibold text-white shadow-lg shadow-indigo-500/20 transition hover:-translate-y-0.5 hover:bg-brand-dark">Back to Home</a>
+                        <p class="text-sm text-slate-600">In the meantime, you can reach me directly at <a href="mailto:wvanheemstra@icloud.com" class="font-semibold text-brand transition hover:text-brand-dark">wvanheemstra@icloud.com</a></p>
+                    </div>
+                </div>
             </div>
-            <div class="footer-contact">
-                <p>Eersel, Netherlands (near Eindhoven)</p>
-                <p>Available for projects in UK and Europe</p>
-                <p><a href="mailto:wvanheemstra@icloud.com">wvanheemstra@icloud.com</a></p>
+        </section>
+    </main>
+
+    <footer class="bg-slate-900 py-16 text-slate-200">
+        <div class="mx-auto grid max-w-6xl gap-10 px-6 md:grid-cols-2 lg:grid-cols-3 lg:px-8">
+            <div>
+                <h3 class="text-xl font-semibold text-white">Resilience Inc</h3>
+                <p class="mt-2 text-sm text-slate-300">Cloud &amp; Security Engineering</p>
             </div>
-            <div class="footer-links">
-                <a href="index.html#services">Services</a>
-                <a href="index.html#about">About</a>
-                <a href="contact.html">Contact</a>
+            <div>
+                <p class="text-sm text-slate-300">Eersel, Netherlands (near Eindhoven)</p>
+                <p class="mt-2 text-sm text-slate-300">Available for projects in UK and Europe</p>
+                <p class="mt-4 text-sm"><a href="mailto:wvanheemstra@icloud.com" class="text-indigo-300 transition hover:text-white">wvanheemstra@icloud.com</a></p>
+            </div>
+            <div class="flex flex-col gap-3 text-sm text-slate-300">
+                <a href="index.html#services" class="transition hover:text-white">Services</a>
+                <a href="index.html#about" class="transition hover:text-white">About</a>
+                <a href="contact.html" class="transition hover:text-white">Contact</a>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 Resilience Inc. All rights reserved.</p>
+        <div class="mt-12 border-t border-slate-700 pt-6 text-center text-xs text-slate-500">
+            <p>&copy; 2025 Resilience Inc. All rights reserved.</p>
         </div>
-    </div>
-</footer>
+    </footer>
 
-<script src="assets/js/main.js"></script>
-
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
+

@@ -99,8 +99,6 @@ website/
 │   └── workflows/
 │       └── deploy.yml          # GitHub Actions deployment
 ├── assets/
-│   ├── css/
-│   │   └── style.css           # Main stylesheet
 │   ├── js/
 │   │   └── main.js             # JavaScript for navigation and forms
 │   └── images/                 # Your images go here
@@ -113,18 +111,30 @@ website/
 
 ## 🎨 Customization Guide
 
-### Colors
+### Colors & Typography
 
-Edit CSS variables in `assets/css/style.css` (lines 8-17):
+Tailwind CSS powers all styling. Update the configuration snippet in each HTML file (inside the `<head>`):
 
-```css
-:root {
-    --primary-color: #2563eb;    /* Main brand color */
-    --primary-dark: #1e40af;     /* Darker shade */
-    --accent-color: #06b6d4;     /* Accent color */
-    /* ... more colors ... */
-}
+```html
+<script>
+  tailwind.config = {
+    plugins: [tailwindcssForms],
+    theme: {
+      extend: {
+        colors: {
+          brand: {
+            DEFAULT: '#2563eb',
+            dark: '#1e40af',
+            light: '#3b82f6'
+          }
+        }
+      }
+    }
+  };
+</script>
 ```
+
+You can also add plugins or additional utility extensions there—for example typography, aspect-ratio, or custom fonts.
 
 ### Services & Pricing
 
@@ -255,6 +265,6 @@ For questions about this website:
 
 -----
 
-**Built with:** HTML5, CSS3, JavaScript, GitHub Pages, Formspree
+**Built with:** HTML5, Tailwind CSS, JavaScript, GitHub Pages, Formspree
 
 **Last Updated:** November 2025

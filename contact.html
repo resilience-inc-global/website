@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,189 +6,200 @@
     <meta name="description" content="Contact Resilience Inc for Cloud & Security Engineering services">
     <title>Contact - Resilience Inc</title>
 
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif']
+                    },
+                    colors: {
+                        brand: {
+                            DEFAULT: '#2563eb',
+                            dark: '#1e40af',
+                            light: '#3b82f6'
+                        }
+                    }
+                }
+            },
+            plugins: [tailwindcssForms]
+        };
+    </script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
 
-<link rel="icon" type="image/svg+xml" href="favicon.svg">
-<link rel="stylesheet" href="assets/css/style.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-GSKVCK6F2F"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-GSKVCK6F2F');
-</script>
-    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GSKVCK6F2F"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-GSKVCK6F2F');
+    </script>
 </head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-brand">
-                <a href="index.html"><h1>Resilience Inc</h1></a>
+<body class="bg-white font-sans text-slate-800 antialiased">
+    <header class="sticky top-0 z-50 bg-white/90 shadow-sm backdrop-blur">
+        <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 lg:px-8">
+            <a href="index.html" class="text-lg font-semibold tracking-tight text-brand transition hover:text-brand-dark">Resilience Inc</a>
+            <div class="hidden flex-col gap-4 md:flex md:flex-row md:items-center md:gap-8" data-nav-menu>
+                <a href="index.html#services" class="text-sm font-medium text-slate-600 transition hover:text-brand">Services</a>
+                <a href="index.html#about" class="text-sm font-medium text-slate-600 transition hover:text-brand">About</a>
+                <a href="contact.html" class="inline-flex items-center justify-center rounded-lg bg-brand px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-brand-dark">Get in Touch</a>
             </div>
-            <ul class="nav-menu">
-                <li><a href="index.html#services">Services</a></li>
-                <li><a href="index.html#about">About</a></li>
-                <li><a href="contact.html" class="btn-primary">Get in Touch</a></li>
-            </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </nav>
-
-
-<!-- Contact Hero -->
-<section class="contact-hero">
-    <div class="container">
-        <h1>Get in Touch</h1>
-        <p>Tell me what's keeping you up at night, and let's see if I can help.</p>
-        <p class="response-time">I'll reply within 48 hours with either "Sorry, not a fit" or "Let's schedule a technical call."</p>
-    </div>
-</section>
-
-<!-- Contact Form -->
-<section class="contact-form-section">
-    <div class="container">
-        <div class="form-wrapper">
-            <form id="contact-form" action="https://formspree.io/f/mrbonybe" method="POST" class="contact-form">
-                <!-- Formspree honeypot spam protection -->
-                <input type="text" name="_gotcha" style="display:none">
-                
-                <!-- Name -->
-                <div class="form-group">
-                    <label for="name">Your Name *</label>
-                    <input type="text" id="name" name="name" required placeholder="John Smith">
+            <button type="button" class="inline-flex items-center justify-center rounded-md border border-slate-200 p-2 text-slate-700 transition hover:border-brand hover:text-brand md:hidden" aria-label="Toggle navigation" aria-controls="mobile-navigation" aria-expanded="false" data-nav-toggle>
+                <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" data-menu-open>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 7h16M4 12h16M4 17h16" />
+                </svg>
+                <svg class="hidden h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" data-menu-close>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 6l12 12M18 6l-12 12" />
+                </svg>
+            </button>
+        </nav>
+        <div class="md:hidden" data-nav-container>
+            <div id="mobile-navigation" class="hidden border-t border-slate-200 bg-white px-6 pb-6 pt-2" data-nav-menu-mobile>
+                <div class="flex flex-col gap-3">
+                    <a href="index.html#services" class="rounded-md px-3 py-2 text-sm font-medium text-slate-700 transition hover:bg-slate-100 hover:text-brand">Services</a>
+                    <a href="index.html#about" class="rounded-md px-3 py-2 text-sm font-medium text-slate-700 transition hover:bg-slate-100 hover:text-brand">About</a>
+                    <a href="contact.html" class="inline-flex items-center justify-center rounded-lg bg-brand px-3 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-brand-dark">Get in Touch</a>
                 </div>
-
-                <!-- Email -->
-                <div class="form-group">
-                    <label for="email">Your Email *</label>
-                    <input type="email" id="email" name="email" required placeholder="john@company.com">
-                </div>
-
-                <!-- Company -->
-                <div class="form-group">
-                    <label for="company">Company</label>
-                    <input type="text" id="company" name="company" placeholder="Your Company Ltd">
-                </div>
-
-                <!-- Phone -->
-                <div class="form-group">
-                    <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" name="phone" placeholder="+31 6 12345678">
-                </div>
-
-                <!-- Service Interest -->
-                <div class="form-group">
-                    <label for="service">What are you interested in? *</label>
-                    <select id="service" name="service" required>
-                        <option value="">Please select...</option>
-                        <option value="security">Security Audit & Hardening</option>
-                        <option value="cloud">Cloud Infrastructure Setup</option>
-                        <option value="devops">DevOps Pipeline Optimization</option>
-                        <option value="other">Other / Not sure yet</option>
-                    </select>
-                </div>
-
-                <!-- Current Situation -->
-                <div class="form-group">
-                    <label for="situation">What's driving you mental right now? *</label>
-                    <textarea id="situation" name="situation" rows="4" required placeholder="Tell me about your current pain points, what's broken, or what's keeping you up at night..."></textarea>
-                    <small>Be as specific as you can - it helps me understand if I'm the right fit.</small>
-                </div>
-
-                <!-- Tech Stack -->
-                <div class="form-group">
-                    <label for="tech-stack">What's your current tech stack?</label>
-                    <textarea id="tech-stack" name="tech-stack" rows="3" placeholder="e.g., Azure, AWS, Jenkins, Docker, Kubernetes, etc."></textarea>
-                    <small>This helps me prepare for our call</small>
-                </div>
-
-                <!-- Timeline -->
-                <div class="form-group">
-                    <label for="timeline">When do you need help?</label>
-                    <select id="timeline" name="timeline">
-                        <option value="">Please select...</option>
-                        <option value="urgent">Urgent (within 2 weeks)</option>
-                        <option value="soon">Soon (within 1-2 months)</option>
-                        <option value="planning">Just planning ahead</option>
-                    </select>
-                </div>
-
-                <!-- Budget -->
-                <div class="form-group">
-                    <label for="budget">Budget range (optional)</label>
-                    <select id="budget" name="budget">
-                        <option value="">Prefer not to say</option>
-                        <option value="under-5k">Under €5,000</option>
-                        <option value="5k-15k">€5,000 - €15,000</option>
-                        <option value="15k-50k">€15,000 - €50,000</option>
-                        <option value="over-50k">Over €50,000</option>
-                    </select>
-                </div>
-
-                <!-- How did you hear -->
-                <div class="form-group">
-                    <label for="referral">How did you hear about me?</label>
-                    <input type="text" id="referral" name="referral" placeholder="LinkedIn, Google, Referral, etc.">
-                </div>
-
-                <!-- Hidden field for form submissions tracking -->
-                <input type="hidden" name="_subject" value="New Enquiry from Resilience Inc Website">
-                <input type="hidden" name="_next" value="https://yourusername.github.io/resilience-inc/thank-you.html">
-
-                <!-- Submit Button -->
-                <div class="form-group">
-                    <button type="submit" class="btn-primary btn-large">Send Enquiry</button>
-                </div>
-
-                <!-- Form Status -->
-                <div id="form-status"></div>
-            </form>
-
-            <!-- Alternative Contact -->
-            <div class="alternative-contact">
-                <h3>Prefer to email directly?</h3>
-                <p>You can also reach me at: <a href="mailto:wvanheemstra@icloud.com">wvanheemstra@icloud.com</a></p>
-                <p class="contact-note">Available for projects across UK and Europe. Fluent in English, Dutch, and German.</p>
             </div>
         </div>
-    </div>
-</section>
+    </header>
 
-<!-- Footer -->
-<footer class="footer">
-    <div class="container">
-        <div class="footer-content">
-            <div class="footer-brand">
-                <h3>Resilience Inc</h3>
-                <p>Cloud & Security Engineering</p>
+    <main>
+        <section class="bg-gradient-to-br from-indigo-500 via-indigo-600 to-purple-600 py-20 text-white">
+            <div class="mx-auto max-w-4xl px-6 text-center lg:px-8">
+                <p class="text-sm uppercase tracking-[0.35em] text-indigo-200">Let's Work Together</p>
+                <h1 class="mt-4 text-4xl font-bold leading-tight sm:text-5xl">Get in Touch</h1>
+                <p class="mt-6 text-lg text-indigo-100">Tell me what's keeping you up at night, and let's see if I can help.</p>
+                <p class="mt-3 text-base text-indigo-100/90">I'll reply within 48 hours with either "Sorry, not a fit" or "Let's schedule a technical call."</p>
             </div>
-            <div class="footer-contact">
-                <p>Eersel, Netherlands (near Eindhoven)</p>
-                <p>Available for projects in UK and Europe</p>
-                <p><a href="mailto:wvanheemstra@icloud.com">wvanheemstra@icloud.com</a></p>
+        </section>
+
+        <section class="bg-slate-50 py-24">
+            <div class="mx-auto max-w-4xl px-6 lg:px-8">
+                <div class="rounded-3xl bg-white p-8 shadow-2xl shadow-indigo-200/30" data-animate>
+                    <form id="contact-form" action="https://formspree.io/f/mrbonybe" method="POST" class="space-y-6">
+                        <input type="text" name="_gotcha" class="hidden" tabindex="-1" autocomplete="off">
+
+                        <div class="grid gap-6 md:grid-cols-2">
+                            <div class="space-y-2">
+                                <label for="name" class="text-sm font-medium text-slate-700">Your Name *</label>
+                                <input type="text" id="name" name="name" required placeholder="John Smith" class="w-full rounded-lg border border-slate-200 bg-white px-4 py-3 text-base text-slate-800 shadow-sm transition focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/20">
+                            </div>
+                            <div class="space-y-2">
+                                <label for="email" class="text-sm font-medium text-slate-700">Your Email *</label>
+                                <input type="email" id="email" name="email" required placeholder="john@company.com" class="w-full rounded-lg border border-slate-200 bg-white px-4 py-3 text-base text-slate-800 shadow-sm transition focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/20">
+                            </div>
+                            <div class="space-y-2">
+                                <label for="company" class="text-sm font-medium text-slate-700">Company</label>
+                                <input type="text" id="company" name="company" placeholder="Your Company Ltd" class="w-full rounded-lg border border-slate-200 bg-white px-4 py-3 text-base text-slate-800 shadow-sm transition focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/20">
+                            </div>
+                            <div class="space-y-2">
+                                <label for="phone" class="text-sm font-medium text-slate-700">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" placeholder="+31 6 12345678" class="w-full rounded-lg border border-slate-200 bg-white px-4 py-3 text-base text-slate-800 shadow-sm transition focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/20">
+                            </div>
+                        </div>
+
+                        <div class="space-y-2">
+                            <label for="service" class="text-sm font-medium text-slate-700">What are you interested in? *</label>
+                            <select id="service" name="service" required class="w-full rounded-lg border border-slate-200 bg-white px-4 py-3 text-base text-slate-800 shadow-sm transition focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/20">
+                                <option value="">Please select...</option>
+                                <option value="security">Security Audit &amp; Hardening</option>
+                                <option value="cloud">Cloud Infrastructure Setup</option>
+                                <option value="devops">DevOps Pipeline Optimization</option>
+                                <option value="other">Other / Not sure yet</option>
+                            </select>
+                        </div>
+
+                        <div class="space-y-2">
+                            <label for="situation" class="text-sm font-medium text-slate-700">What's driving you mental right now? *</label>
+                            <textarea id="situation" name="situation" rows="4" required placeholder="Tell me about your current pain points, what's broken, or what's keeping you up at night..." class="w-full rounded-lg border border-slate-200 bg-white px-4 py-3 text-base text-slate-800 shadow-sm transition focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/20"></textarea>
+                            <p class="text-sm text-slate-500">Be as specific as you can - it helps me understand if I'm the right fit.</p>
+                        </div>
+
+                        <div class="space-y-2">
+                            <label for="tech-stack" class="text-sm font-medium text-slate-700">What's your current tech stack?</label>
+                            <textarea id="tech-stack" name="tech-stack" rows="3" placeholder="e.g., Azure, AWS, Jenkins, Docker, Kubernetes, etc." class="w-full rounded-lg border border-slate-200 bg-white px-4 py-3 text-base text-slate-800 shadow-sm transition focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/20"></textarea>
+                            <p class="text-sm text-slate-500">This helps me prepare for our call.</p>
+                        </div>
+
+                        <div class="grid gap-6 md:grid-cols-2">
+                            <div class="space-y-2">
+                                <label for="timeline" class="text-sm font-medium text-slate-700">When do you need help?</label>
+                                <select id="timeline" name="timeline" class="w-full rounded-lg border border-slate-200 bg-white px-4 py-3 text-base text-slate-800 shadow-sm transition focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/20">
+                                    <option value="">Please select...</option>
+                                    <option value="urgent">Urgent (within 2 weeks)</option>
+                                    <option value="soon">Soon (within 1-2 months)</option>
+                                    <option value="planning">Just planning ahead</option>
+                                </select>
+                            </div>
+                            <div class="space-y-2">
+                                <label for="budget" class="text-sm font-medium text-slate-700">Budget range (optional)</label>
+                                <select id="budget" name="budget" class="w-full rounded-lg border border-slate-200 bg-white px-4 py-3 text-base text-slate-800 shadow-sm transition focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/20">
+                                    <option value="">Prefer not to say</option>
+                                    <option value="under-5k">Under €5,000</option>
+                                    <option value="5k-15k">€5,000 - €15,000</option>
+                                    <option value="15k-50k">€15,000 - €50,000</option>
+                                    <option value="over-50k">Over €50,000</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="space-y-2">
+                            <label for="referral" class="text-sm font-medium text-slate-700">How did you hear about me?</label>
+                            <input type="text" id="referral" name="referral" placeholder="LinkedIn, Google, Referral, etc." class="w-full rounded-lg border border-slate-200 bg-white px-4 py-3 text-base text-slate-800 shadow-sm transition focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/20">
+                        </div>
+
+                        <input type="hidden" name="_subject" value="New Enquiry from Resilience Inc Website">
+                        <input type="hidden" name="_next" value="https://yourusername.github.io/resilience-inc/thank-you.html">
+
+                        <div>
+                            <button type="submit" class="inline-flex w-full items-center justify-center rounded-xl bg-brand px-6 py-3 text-base font-semibold text-white shadow-lg shadow-indigo-500/20 transition hover:-translate-y-0.5 hover:bg-brand-dark">
+                                Send Enquiry
+                            </button>
+                        </div>
+
+                        <div id="form-status" class="hidden rounded-lg border px-4 py-3 text-sm"></div>
+                    </form>
+
+                    <div class="mt-10 rounded-2xl border border-slate-100 bg-slate-50 p-6 text-center" data-animate>
+                        <h3 class="text-lg font-semibold text-slate-900">Prefer to email directly?</h3>
+                        <p class="mt-3 text-base text-slate-600">You can also reach me at: <a href="mailto:wvanheemstra@icloud.com" class="font-semibold text-brand transition hover:text-brand-dark">wvanheemstra@icloud.com</a></p>
+                        <p class="mt-3 text-sm text-slate-500">Available for projects across UK and Europe. Fluent in English, Dutch, and German.</p>
+                    </div>
+                </div>
             </div>
-            <div class="footer-links">
-                <a href="index.html#services">Services</a>
-                <a href="index.html#about">About</a>
-                <a href="contact.html">Contact</a>
+        </section>
+    </main>
+
+    <footer class="bg-slate-900 py-16 text-slate-200">
+        <div class="mx-auto grid max-w-6xl gap-10 px-6 md:grid-cols-2 lg:grid-cols-3 lg:px-8">
+            <div>
+                <h3 class="text-xl font-semibold text-white">Resilience Inc</h3>
+                <p class="mt-2 text-sm text-slate-300">Cloud &amp; Security Engineering</p>
+            </div>
+            <div>
+                <p class="text-sm text-slate-300">Eersel, Netherlands (near Eindhoven)</p>
+                <p class="mt-2 text-sm text-slate-300">Available for projects in UK and Europe</p>
+                <p class="mt-4 text-sm"><a href="mailto:wvanheemstra@icloud.com" class="text-indigo-300 transition hover:text-white">wvanheemstra@icloud.com</a></p>
+            </div>
+            <div class="flex flex-col gap-3 text-sm text-slate-300">
+                <a href="index.html#services" class="transition hover:text-white">Services</a>
+                <a href="index.html#about" class="transition hover:text-white">About</a>
+                <a href="contact.html" class="transition hover:text-white">Contact</a>
             </div>
         </div>
-        <div class="footer-bottom">
+        <div class="mt-12 border-t border-slate-700 pt-6 text-center text-xs text-slate-500">
             <p>&copy; 2025 Resilience Inc. All rights reserved.</p>
         </div>
-    </div>
-</footer>
+    </footer>
 
-<script src="assets/js/main.js"></script>
-
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
+

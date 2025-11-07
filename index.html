@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,293 +7,313 @@
     <meta name="keywords" content="DevSecOps, Cloud Security, Azure, AWS, Terraform, CI/CD, Infrastructure as Code, Security Audit">
     <meta name="author" content="Willem van Heemstra">
 
-<!-- Open Graph -->
-<meta property="og:title" content="Resilience Inc - Cloud & Security Engineering">
-<meta property="og:description" content="DevSecOps expertise for secure infrastructure and smooth deployments">
-<meta property="og:type" content="website">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Resilience Inc - Cloud & Security Engineering">
+    <meta property="og:description" content="DevSecOps expertise for secure infrastructure and smooth deployments">
+    <meta property="og:type" content="website">
 
-<title>Resilience Inc - Cloud & Security Engineer | Willem van Heemstra</title>
+    <title>Resilience Inc - Cloud & Security Engineer | Willem van Heemstra</title>
 
-<link rel="icon" type="image/svg+xml" href="favicon.svg">
-<link rel="stylesheet" href="assets/css/style.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif']
+                    },
+                    colors: {
+                        brand: {
+                            DEFAULT: '#2563eb',
+                            dark: '#1e40af',
+                            light: '#3b82f6'
+                        }
+                    }
+                }
+            },
+            plugins: [tailwindcssForms]
+        };
+    </script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
 
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-GSKVCK6F2F"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-GSKVCK6F2F');
-</script>
-    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GSKVCK6F2F"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-GSKVCK6F2F');
+    </script>
 </head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-brand">
-                <h1>Resilience Inc</h1>
+<body class="bg-white font-sans text-slate-800 antialiased">
+    <header class="sticky top-0 z-50 bg-white/90 shadow-sm backdrop-blur">
+        <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 lg:px-8">
+            <a href="#top" class="text-lg font-semibold tracking-tight text-brand hover:text-brand-dark transition" data-scroll-link>
+                Resilience Inc
+            </a>
+            <div class="hidden flex-col gap-4 md:flex md:flex-row md:items-center md:gap-8" data-nav-menu>
+                <a href="#services" class="text-sm font-medium text-slate-600 transition hover:text-brand" data-scroll-link>Services</a>
+                <a href="#about" class="text-sm font-medium text-slate-600 transition hover:text-brand" data-scroll-link>About</a>
+                <a href="contact.html" class="inline-flex items-center justify-center rounded-lg bg-brand px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-brand-dark">Get in Touch</a>
             </div>
-            <ul class="nav-menu">
-                <li><a href="#services">Services</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="contact.html" class="btn-primary">Get in Touch</a></li>
-            </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </nav>
-
-
-<!-- Hero Section -->
-<section class="hero">
-    <div class="container">
-        <div class="hero-content">
-            <h1 class="hero-title">Willem van Heemstra: Cloud & Security Engineer</h1>
-            <p class="hero-subtitle">DevSecOps expertise that keeps your infrastructure secure and your deployments smooth</p>
-            <p class="hero-tagline">Delivered by a multi-lingual engineer with 25+ years of hands-on experience and security analysis training.</p>
-        </div>
-    </div>
-</section>
-
-<!-- Problem Statement -->
-<section class="problems">
-    <div class="container">
-        <h2>I get it…</h2>
-        <ul class="problem-list">
-            <li>Your cloud infrastructure is a tangled mess, and you're worried about security gaps.</li>
-            <li>Deployments take forever, and your CI/CD pipeline keeps breaking.</li>
-            <li>You need Infrastructure as Code, but don't know where to start.</li>
-            <li>Security vulnerabilities keep popping up, and you're not sure how exposed you really are.</li>
-        </ul>
-        <p class="problems-cta"><strong>Sound familiar? You're in the right place!</strong></p>
-    </div>
-</section>
-
-<!-- Testimonial -->
-<section class="testimonial">
-    <div class="container">
-        <blockquote>
-            <p>"Willem optimized our entire DevOps pipeline and cut our deployment time by 60%. His security audits caught vulnerabilities we didn't even know existed."</p>
-            <cite>— Engineering Manager, Tech Company</cite>
-        </blockquote>
-    </div>
-</section>
-
-<!-- About Section -->
-<section id="about" class="about">
-    <div class="container">
-        <div class="about-content">
-            <div class="about-image">
-                <div class="placeholder-image">
-                    <span>Photo</span>
+            <button type="button" class="inline-flex items-center justify-center rounded-md border border-slate-200 p-2 text-slate-700 transition hover:border-brand hover:text-brand md:hidden" aria-label="Toggle navigation" aria-controls="mobile-navigation" aria-expanded="false" data-nav-toggle>
+                <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" data-menu-open>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 7h16M4 12h16M4 17h16" />
+                </svg>
+                <svg class="hidden h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" data-menu-close>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 6l12 12M18 6l-12 12" />
+                </svg>
+            </button>
+        </nav>
+        <div class="md:hidden" data-nav-container>
+            <div id="mobile-navigation" class="hidden border-t border-slate-200 bg-white px-6 pb-6 pt-2" data-nav-menu-mobile>
+                <div class="flex flex-col gap-3">
+                    <a href="#services" class="rounded-md px-3 py-2 text-sm font-medium text-slate-700 transition hover:bg-slate-100 hover:text-brand" data-scroll-link>Services</a>
+                    <a href="#about" class="rounded-md px-3 py-2 text-sm font-medium text-slate-700 transition hover:bg-slate-100 hover:text-brand" data-scroll-link>About</a>
+                    <a href="contact.html" class="inline-flex items-center justify-center rounded-lg bg-brand px-3 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-brand-dark">Get in Touch</a>
                 </div>
             </div>
-            <div class="about-text">
-                <h2>Hi, I'm Willem</h2>
-                <p>After 25+ years of building secure cloud infrastructure for companies like <strong>ASML</strong>, <strong>Philips</strong>, and <strong>CGI</strong>, I know exactly how to bring order to your DevSecOps chaos without the corporate overhead.</p>
-                
-                <p>As your <strong>Cloud & Security Engineer</strong>, I'll:</p>
-                <ul>
-                    <li>Harden your infrastructure and patch your vulnerabilities</li>
-                    <li>Automate your CI/CD pipeline so deployments just work</li>
-                    <li>Build Infrastructure as Code that scales with your team</li>
-                    <li>Provide security posture overviews you can actually understand</li>
+        </div>
+    </header>
+
+    <main id="top">
+        <section class="bg-gradient-to-br from-indigo-500 via-indigo-600 to-purple-600 py-24 text-white">
+            <div class="mx-auto max-w-4xl px-6 text-center lg:px-8">
+                <p class="text-sm uppercase tracking-[0.35em] text-indigo-200">Cloud &amp; Security Engineer</p>
+                <h1 class="mt-4 text-4xl font-bold leading-tight sm:text-5xl">Willem van Heemstra: Cloud &amp; Security Engineer</h1>
+                <p class="mt-6 text-lg text-indigo-100">DevSecOps expertise that keeps your infrastructure secure and your deployments smooth.</p>
+                <p class="mt-4 text-base text-indigo-100/90">Delivered by a multi-lingual engineer with 25+ years of hands-on experience and security analysis training.</p>
+            </div>
+        </section>
+
+        <section class="bg-slate-50 py-20">
+            <div class="mx-auto max-w-4xl px-6 text-center lg:px-8">
+                <h2 class="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">I get it…</h2>
+                <ul class="mt-10 space-y-4 text-left">
+                    <li class="rounded-lg border border-slate-200 bg-white p-5 text-lg text-slate-700 shadow-sm" data-animate>Your cloud infrastructure is a tangled mess, and you're worried about security gaps.</li>
+                    <li class="rounded-lg border border-slate-200 bg-white p-5 text-lg text-slate-700 shadow-sm" data-animate>Deployments take forever, and your CI/CD pipeline keeps breaking.</li>
+                    <li class="rounded-lg border border-slate-200 bg-white p-5 text-lg text-slate-700 shadow-sm" data-animate>You need Infrastructure as Code, but don't know where to start.</li>
+                    <li class="rounded-lg border border-slate-200 bg-white p-5 text-lg text-slate-700 shadow-sm" data-animate>Security vulnerabilities keep popping up, and you're not sure how exposed you really are.</li>
                 </ul>
-                
-                <p>I'm practical, detail-oriented, and fluent in <strong>English, Dutch, German</strong> (plus French and Spanish). Whether you need someone to architect your Azure environment or hunt down that security risk, just give me a shout!</p>
-                
-                <p>And yes, I can explain Terraform to your CEO in terms they'll actually get 😉</p>
+                <p class="mt-10 text-xl font-semibold text-brand">Sound familiar? You're in the right place!</p>
+            </div>
+        </section>
+
+        <section class="bg-white py-20">
+            <div class="mx-auto max-w-4xl px-6 lg:px-8">
+                <blockquote class="rounded-2xl border border-indigo-100 bg-indigo-50/70 p-10 shadow-sm sm:p-12" data-animate>
+                    <p class="text-xl font-semibold text-slate-800">“Willem optimized our entire DevOps pipeline and cut our deployment time by 60%. His security audits caught vulnerabilities we didn't even know existed.”</p>
+                    <cite class="mt-6 block text-base font-semibold text-indigo-800">— Engineering Manager, Tech Company</cite>
+                </blockquote>
+            </div>
+        </section>
+
+        <section id="about" class="bg-white py-24">
+            <div class="mx-auto flex max-w-6xl flex-col gap-14 px-6 lg:flex-row lg:items-center lg:px-8">
+                <div class="flex flex-1 justify-center" data-animate>
+                    <div class="flex h-64 w-64 items-center justify-center rounded-full bg-gradient-to-br from-brand to-cyan-400 text-lg font-semibold text-white shadow-xl">
+                        Photo
+                    </div>
+                </div>
+                <div class="flex-1 space-y-6 text-slate-700" data-animate>
+                    <h2 class="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">Hi, I'm Willem</h2>
+                    <p>After 25+ years of building secure cloud infrastructure for companies like <strong>ASML</strong>, <strong>Philips</strong>, and <strong>CGI</strong>, I know exactly how to bring order to your DevSecOps chaos without the corporate overhead.</p>
+                    <div class="space-y-4">
+                        <p>As your <strong>Cloud &amp; Security Engineer</strong>, I'll:</p>
+                        <ul class="space-y-3 text-base text-slate-700">
+                            <li class="flex items-start gap-3"><span class="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-brand/10 text-brand">•</span> Harden your infrastructure and patch your vulnerabilities</li>
+                            <li class="flex items-start gap-3"><span class="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-brand/10 text-brand">•</span> Automate your CI/CD pipeline so deployments just work</li>
+                            <li class="flex items-start gap-3"><span class="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-brand/10 text-brand">•</span> Build Infrastructure as Code that scales with your team</li>
+                            <li class="flex items-start gap-3"><span class="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-brand/10 text-brand">•</span> Provide security posture overviews you can actually understand</li>
+                        </ul>
+                    </div>
+                    <p>I'm practical, detail-oriented, and fluent in <strong>English, Dutch, German</strong> (plus French and Spanish). Whether you need someone to architect your Azure environment or hunt down that security risk, just give me a shout!</p>
+                    <p>And yes, I can explain Terraform to your CEO in terms they'll actually get 😉</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="bg-slate-50 py-24">
+            <div class="mx-auto max-w-6xl px-6 lg:px-8">
+                <div class="text-center" data-animate>
+                    <h2 class="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">Choose your path</h2>
+                    <p class="mt-4 text-base text-slate-600">Pick the engagement that matches where your team is today.</p>
+                </div>
+                <div class="mt-14 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+                    <div class="flex flex-col rounded-2xl border border-white bg-white/80 p-8 shadow-lg shadow-indigo-200/40 ring-1 ring-indigo-100 transition hover:-translate-y-1 hover:shadow-xl" data-animate>
+                        <div class="text-4xl">🔒</div>
+                        <h3 class="mt-6 text-2xl font-semibold text-slate-900">Security Audit &amp; Hardening</h3>
+                        <p class="mt-3 text-sm font-semibold uppercase tracking-wide text-brand">Find and fix vulnerabilities before they become breaches.</p>
+                        <p class="mt-4 text-slate-600">Security analysis of applications, virtual servers, and artifacts. Risk management and compliance reporting. Best for startups and scale-ups who need peace of mind.</p>
+                        <p class="mt-6 text-lg font-semibold text-slate-900">Starting from €2,500 per audit</p>
+                        <a href="contact.html?service=security" class="mt-6 inline-flex items-center justify-center rounded-lg border border-brand bg-white px-4 py-2 text-sm font-semibold text-brand transition hover:bg-brand hover:text-white">Enquire Now</a>
+                    </div>
+                    <div class="flex flex-col rounded-2xl border border-white bg-white/80 p-8 shadow-lg shadow-indigo-200/40 ring-1 ring-indigo-100 transition hover:-translate-y-1 hover:shadow-xl" data-animate>
+                        <div class="text-4xl">☁️</div>
+                        <h3 class="mt-6 text-2xl font-semibold text-slate-900">Cloud Infrastructure Setup</h3>
+                        <p class="mt-3 text-sm font-semibold uppercase tracking-wide text-brand">Azure, AWS, or hybrid—built right from the start.</p>
+                        <p class="mt-4 text-slate-600">Infrastructure as Code using Terraform, Packer, and Docker. Automated provisioning and configuration management. Best for teams moving to the cloud or modernizing legacy systems.</p>
+                        <p class="mt-6 text-lg font-semibold text-slate-900">Starting from €5,000 per project</p>
+                        <a href="contact.html?service=cloud" class="mt-6 inline-flex items-center justify-center rounded-lg border border-brand bg-white px-4 py-2 text-sm font-semibold text-brand transition hover:bg-brand hover:text-white">Enquire Now</a>
+                    </div>
+                    <div class="flex flex-col rounded-2xl border border-white bg-white/80 p-8 shadow-lg shadow-indigo-200/40 ring-1 ring-indigo-100 transition hover:-translate-y-1 hover:shadow-xl" data-animate>
+                        <div class="text-4xl">⚙️</div>
+                        <h3 class="mt-6 text-2xl font-semibold text-slate-900">DevOps Pipeline Optimization</h3>
+                        <p class="mt-3 text-sm font-semibold uppercase tracking-wide text-brand">CI/CD that actually works—every single time.</p>
+                        <p class="mt-4 text-slate-600">End-to-end pipeline automation with Jenkins, Bamboo, and GitOps. Container orchestration, artifact management, and monitoring. Best for teams drowning in manual deployments.</p>
+                        <p class="mt-6 text-lg font-semibold text-slate-900">Monthly retainer from €3,500</p>
+                        <a href="contact.html?service=devops" class="mt-6 inline-flex items-center justify-center rounded-lg border border-brand bg-white px-4 py-2 text-sm font-semibold text-brand transition hover:bg-brand hover:text-white">Enquire Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-white py-24">
+            <div class="mx-auto max-w-5xl px-6 lg:px-8">
+                <div class="text-center" data-animate>
+                    <h2 class="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">How we start</h2>
+                    <p class="mt-4 text-base text-slate-600">A simple three-step process to get you from chaos to clarity.</p>
+                </div>
+                <div class="mt-14 grid gap-8 md:grid-cols-3">
+                    <div class="flex flex-col items-center rounded-2xl border border-slate-200 bg-slate-50/50 p-8 text-center shadow-sm" data-animate>
+                        <div class="flex h-14 w-14 items-center justify-center rounded-full bg-brand text-lg font-semibold text-white">1</div>
+                        <h3 class="mt-6 text-xl font-semibold text-slate-900">Fill out the enquiry form</h3>
+                        <p class="mt-3 text-base text-slate-600">Tell me what's breaking and where you need help.</p>
+                    </div>
+                    <div class="flex flex-col items-center rounded-2xl border border-slate-200 bg-slate-50/50 p-8 text-center shadow-sm" data-animate>
+                        <div class="flex h-14 w-14 items-center justify-center rounded-full bg-brand text-lg font-semibold text-white">2</div>
+                        <h3 class="mt-6 text-xl font-semibold text-slate-900">Technical discovery call</h3>
+                        <p class="mt-3 text-base text-slate-600">We discuss your stack, confirm fit, and agree on scope and timeline.</p>
+                    </div>
+                    <div class="flex flex-col items-center rounded-2xl border border-slate-200 bg-slate-50/50 p-8 text-center shadow-sm" data-animate>
+                        <div class="flex h-14 w-14 items-center justify-center rounded-full bg-brand text-lg font-semibold text-white">3</div>
+                        <h3 class="mt-6 text-xl font-semibold text-slate-900">Access and action</h3>
+                        <p class="mt-3 text-base text-slate-600">We set up secure access, document everything, and get to work.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-slate-50 py-24">
+            <div class="mx-auto max-w-6xl px-6 lg:px-8">
+                <div class="text-center" data-animate>
+                    <h2 class="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">Why trust me</h2>
+                    <p class="mt-4 text-base text-slate-600">A track record of reliability and deep technical expertise.</p>
+                </div>
+                <div class="mt-14 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+                    <div class="flex gap-4 rounded-xl border border-white bg-white p-6 shadow-sm" data-animate>
+                        <span class="flex h-10 w-10 items-center justify-center rounded-full bg-emerald-100 text-lg font-semibold text-emerald-600">✓</span>
+                        <p class="text-slate-700"><strong>Currently at ASML</strong> optimizing DevOps pipelines for semiconductor manufacturing</p>
+                    </div>
+                    <div class="flex gap-4 rounded-xl border border-white bg-white p-6 shadow-sm" data-animate>
+                        <span class="flex h-10 w-10 items-center justify-center rounded-full bg-emerald-100 text-lg font-semibold text-emerald-600">✓</span>
+                        <p class="text-slate-700"><strong>MSc-level expertise</strong> in cloud architecture and security analysis</p>
+                    </div>
+                    <div class="flex gap-4 rounded-xl border border-white bg-white p-6 shadow-sm" data-animate>
+                        <span class="flex h-10 w-10 items-center justify-center rounded-full bg-emerald-100 text-lg font-semibold text-emerald-600">✓</span>
+                        <p class="text-slate-700"><strong>25+ years</strong> across finance, pharma, telecom, and tech sectors</p>
+                    </div>
+                    <div class="flex gap-4 rounded-xl border border-white bg-white p-6 shadow-sm" data-animate>
+                        <span class="flex h-10 w-10 items-center justify-center rounded-full bg-emerald-100 text-lg font-semibold text-emerald-600">✓</span>
+                        <p class="text-slate-700"><strong>Multi-lingual</strong> project delivery across UK, Netherlands, and Germany</p>
+                    </div>
+                    <div class="flex gap-4 rounded-xl border border-white bg-white p-6 shadow-sm" data-animate>
+                        <span class="flex h-10 w-10 items-center justify-center rounded-full bg-emerald-100 text-lg font-semibold text-emerald-600">✓</span>
+                        <p class="text-slate-700"><strong>Hands-on with:</strong> Azure, AWS, Terraform, Docker, Kubernetes, Jenkins, SonarQube</p>
+                    </div>
+                    <div class="flex gap-4 rounded-xl border border-white bg-white p-6 shadow-sm" data-animate>
+                        <span class="flex h-10 w-10 items-center justify-center rounded-full bg-emerald-100 text-lg font-semibold text-emerald-600">✓</span>
+                        <p class="text-slate-700"><strong>Security-first mindset</strong> from vulnerability detection to disaster recovery</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-white py-24">
+            <div class="mx-auto max-w-5xl px-6 lg:px-8">
+                <div class="text-center" data-animate>
+                    <h2 class="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">Tech I work best with</h2>
+                    <p class="mt-4 text-base text-slate-600">These tools help me ship robust infrastructure fast.</p>
+                </div>
+                <div class="mt-14 grid gap-6 md:grid-cols-2">
+                    <div class="rounded-2xl border border-slate-100 bg-slate-50 p-6" data-animate>
+                        <h3 class="text-lg font-semibold text-brand">Cloud</h3>
+                        <p class="mt-2 text-slate-600">Microsoft Azure, Amazon AWS, Google Cloud Platform</p>
+                    </div>
+                    <div class="rounded-2xl border border-slate-100 bg-slate-50 p-6" data-animate>
+                        <h3 class="text-lg font-semibold text-brand">IaC</h3>
+                        <p class="mt-2 text-slate-600">Terraform, Packer, Docker, Kubernetes</p>
+                    </div>
+                    <div class="rounded-2xl border border-slate-100 bg-slate-50 p-6" data-animate>
+                        <h3 class="text-lg font-semibold text-brand">CI/CD</h3>
+                        <p class="mt-2 text-slate-600">Jenkins, Bamboo, GitLab CI, GitHub Actions</p>
+                    </div>
+                    <div class="rounded-2xl border border-slate-100 bg-slate-50 p-6" data-animate>
+                        <h3 class="text-lg font-semibold text-brand">Config Management</h3>
+                        <p class="mt-2 text-slate-600">Puppet, Ansible</p>
+                    </div>
+                    <div class="rounded-2xl border border-slate-100 bg-slate-50 p-6" data-animate>
+                        <h3 class="text-lg font-semibold text-brand">Security</h3>
+                        <p class="mt-2 text-slate-600">InSpec, SonarQube, Dynatrace</p>
+                    </div>
+                    <div class="rounded-2xl border border-slate-100 bg-slate-50 p-6" data-animate>
+                        <h3 class="text-lg font-semibold text-brand">Languages</h3>
+                        <p class="mt-2 text-slate-600">Python, Ruby, Java, C#, JavaScript, YAML, HCL</p>
+                    </div>
+                </div>
+                <p class="mt-10 text-center text-base italic text-slate-600">But I'm also happy to adapt to your existing stack or recommend better-fit tools.</p>
+            </div>
+        </section>
+
+        <section class="bg-slate-50 py-24">
+            <div class="mx-auto max-w-4xl px-6 text-center lg:px-8">
+                <h2 class="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl" data-animate>Hire me, and finally get…</h2>
+                <ul class="mt-10 space-y-4 text-left" data-animate>
+                    <li class="rounded-lg border border-emerald-200 bg-white p-5 text-lg text-slate-700 shadow-sm">Infrastructure that deploys itself</li>
+                    <li class="rounded-lg border border-emerald-200 bg-white p-5 text-lg text-slate-700 shadow-sm">Security vulnerabilities caught before production</li>
+                    <li class="rounded-lg border border-emerald-200 bg-white p-5 text-lg text-slate-700 shadow-sm">Clear runbooks your team can actually follow</li>
+                    <li class="rounded-lg border border-emerald-200 bg-white p-5 text-lg text-slate-700 shadow-sm">Monitoring dashboards that make sense</li>
+                    <li class="rounded-lg border border-emerald-200 bg-white p-5 text-lg text-slate-700 shadow-sm">Time to focus on features, not firefighting</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="bg-gradient-to-br from-indigo-500 via-indigo-600 to-purple-600 py-24 text-center text-white">
+            <div class="mx-auto max-w-3xl px-6 lg:px-8">
+                <h2 class="text-3xl font-semibold tracking-tight sm:text-4xl">Ready to secure your infrastructure?</h2>
+                <p class="mt-4 text-lg text-indigo-100">Fill out the <strong>enquiry form</strong> and tell me what's keeping you up at night.</p>
+                <p class="mt-2 text-base text-indigo-100/90">I'll reply within 48 hours with either "Sorry, not a fit" or "Let's schedule a technical call."</p>
+                <a href="contact.html" class="mt-8 inline-flex items-center justify-center rounded-xl bg-white px-6 py-3 text-base font-semibold text-indigo-700 shadow-lg shadow-indigo-900/20 transition hover:-translate-y-1 hover:bg-indigo-50">Get in Touch</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-slate-900 py-16 text-slate-200">
+        <div class="mx-auto grid max-w-6xl gap-10 px-6 md:grid-cols-2 lg:grid-cols-3 lg:px-8">
+            <div>
+                <h3 class="text-xl font-semibold text-white">Resilience Inc</h3>
+                <p class="mt-2 text-sm text-slate-300">Cloud &amp; Security Engineering</p>
+            </div>
+            <div>
+                <p class="text-sm text-slate-300">Eersel, Netherlands (near Eindhoven)</p>
+                <p class="mt-2 text-sm text-slate-300">Available for projects in UK and Europe</p>
+                <p class="mt-4 text-sm"><a href="mailto:wvanheemstra@icloud.com" class="text-indigo-300 hover:text-white">wvanheemstra@icloud.com</a></p>
+            </div>
+            <div class="flex flex-col gap-3 text-sm text-slate-300">
+                <a href="#services" class="hover:text-white" data-scroll-link>Services</a>
+                <a href="#about" class="hover:text-white" data-scroll-link>About</a>
+                <a href="contact.html" class="hover:text-white">Contact</a>
             </div>
         </div>
-    </div>
-</section>
-
-<!-- Services Section -->
-<section id="services" class="services">
-    <div class="container">
-        <h2>Choose your path</h2>
-        <div class="services-grid">
-            <!-- Service 1 -->
-            <div class="service-card">
-                <div class="service-icon">🔒</div>
-                <h3>Security Audit & Hardening</h3>
-                <p class="service-tagline">Find and fix vulnerabilities before they become breaches.</p>
-                <p>Security analysis of applications, virtual servers, and artifacts. Risk management and compliance reporting. Best for startups and scale-ups who need peace of mind.</p>
-                <p class="service-price">Starting from €2,500 per audit</p>
-                <a href="contact.html?service=security" class="btn-secondary">Enquire Now</a>
-            </div>
-
-            <!-- Service 2 -->
-            <div class="service-card">
-                <div class="service-icon">☁️</div>
-                <h3>Cloud Infrastructure Setup</h3>
-                <p class="service-tagline">Azure, AWS, or hybrid—built right from the start.</p>
-                <p>Infrastructure as Code using Terraform, Packer, and Docker. Automated provisioning and configuration management. Best for teams moving to the cloud or modernizing legacy systems.</p>
-                <p class="service-price">Starting from €5,000 per project</p>
-                <a href="contact.html?service=cloud" class="btn-secondary">Enquire Now</a>
-            </div>
-
-            <!-- Service 3 -->
-            <div class="service-card">
-                <div class="service-icon">⚙️</div>
-                <h3>DevOps Pipeline Optimization</h3>
-                <p class="service-tagline">CI/CD that actually works—every single time.</p>
-                <p>End-to-end pipeline automation with Jenkins, Bamboo, and GitOps. Container orchestration, artifact management, and monitoring. Best for teams drowning in manual deployments.</p>
-                <p class="service-price">Monthly retainer from €3,500</p>
-                <a href="contact.html?service=devops" class="btn-secondary">Enquire Now</a>
-            </div>
+        <div class="mt-12 border-t border-slate-700 pt-6 text-center text-xs text-slate-500">
+            <p>&copy; 2025 Resilience Inc. All rights reserved.</p>
         </div>
-    </div>
-</section>
+    </footer>
 
-<!-- Process Section -->
-<section class="process">
-    <div class="container">
-        <h2>How we start</h2>
-        <div class="process-steps">
-            <div class="process-step">
-                <div class="step-number">1</div>
-                <h3>Fill out the enquiry form</h3>
-                <p>Tell me what's breaking and where you need help.</p>
-            </div>
-            <div class="process-step">
-                <div class="step-number">2</div>
-                <h3>Technical discovery call</h3>
-                <p>We discuss your stack, confirm fit, and agree on scope and timeline.</p>
-            </div>
-            <div class="process-step">
-                <div class="step-number">3</div>
-                <h3>Access and action</h3>
-                <p>We set up secure access, document everything, and get to work.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Trust Indicators -->
-<section class="trust">
-    <div class="container">
-        <h2>Why trust me</h2>
-        <div class="trust-grid">
-            <div class="trust-item">
-                <span class="trust-icon">✓</span>
-                <p><strong>Currently at ASML</strong> optimizing DevOps pipelines for semiconductor manufacturing</p>
-            </div>
-            <div class="trust-item">
-                <span class="trust-icon">✓</span>
-                <p><strong>MSc-level expertise</strong> in cloud architecture and security analysis</p>
-            </div>
-            <div class="trust-item">
-                <span class="trust-icon">✓</span>
-                <p><strong>25+ years</strong> across finance, pharma, telecom, and tech sectors</p>
-            </div>
-            <div class="trust-item">
-                <span class="trust-icon">✓</span>
-                <p><strong>Multi-lingual</strong> project delivery across UK, Netherlands, and Germany</p>
-            </div>
-            <div class="trust-item">
-                <span class="trust-icon">✓</span>
-                <p><strong>Hands-on with:</strong> Azure, AWS, Terraform, Docker, Kubernetes, Jenkins, SonarQube</p>
-            </div>
-            <div class="trust-item">
-                <span class="trust-icon">✓</span>
-                <p><strong>Security-first mindset</strong> from vulnerability detection to disaster recovery</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Tech Stack -->
-<section class="tech-stack">
-    <div class="container">
-        <h2>Tech I work best with</h2>
-        <div class="tech-categories">
-            <div class="tech-category">
-                <h3>Cloud</h3>
-                <p>Microsoft Azure, Amazon AWS, Google Cloud Platform</p>
-            </div>
-            <div class="tech-category">
-                <h3>IaC</h3>
-                <p>Terraform, Packer, Docker, Kubernetes</p>
-            </div>
-            <div class="tech-category">
-                <h3>CI/CD</h3>
-                <p>Jenkins, Bamboo, GitLab CI, GitHub Actions</p>
-            </div>
-            <div class="tech-category">
-                <h3>Config Management</h3>
-                <p>Puppet, Ansible</p>
-            </div>
-            <div class="tech-category">
-                <h3>Security</h3>
-                <p>InSpec, SonarQube, Dynatrace</p>
-            </div>
-            <div class="tech-category">
-                <h3>Languages</h3>
-                <p>Python, Ruby, Java, C#, JavaScript, YAML, HCL</p>
-            </div>
-        </div>
-        <p class="tech-note">But I'm also happy to adapt to your existing stack or recommend better-fit tools.</p>
-    </div>
-</section>
-
-<!-- Benefits -->
-<section class="benefits">
-    <div class="container">
-        <h2>Hire me, and finally get…</h2>
-        <ul class="benefits-list">
-            <li>Infrastructure that deploys itself</li>
-            <li>Security vulnerabilities caught before production</li>
-            <li>Clear runbooks your team can actually follow</li>
-            <li>Monitoring dashboards that make sense</li>
-            <li>Time to focus on features, not firefighting</li>
-        </ul>
-    </div>
-</section>
-
-<!-- Final CTA -->
-<section class="final-cta">
-    <div class="container">
-        <h2>Ready to secure your infrastructure?</h2>
-        <p>Fill out the <strong>enquiry form</strong> and tell me what's keeping you up at night.</p>
-        <p>I'll reply within 48 hours with either "Sorry, not a fit" or "Let's schedule a technical call."</p>
-        <a href="contact.html" class="btn-primary btn-large">Get in Touch</a>
-    </div>
-</section>
-
-<!-- Footer -->
-<footer class="footer">
-    <div class="container">
-        <div class="footer-content">
-            <div class="footer-brand">
-                <h3>Resilience Inc</h3>
-                <p>Cloud & Security Engineering</p>
-            </div>
-            <div class="footer-contact">
-                <p>Eersel, Netherlands (near Eindhoven)</p>
-                <p>Available for projects in UK and Europe</p>
-                <p><a href="mailto:wvanheemstra@icloud.com">wvanheemstra@icloud.com</a></p>
-            </div>
-            <div class="footer-links">
-                <a href="#services">Services</a>
-                <a href="#about">About</a>
-                <a href="contact.html">Contact</a>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 Resilience Inc. All rights reserved.</p>
-        </div>
-    </div>
-</footer>
-
-<script src="assets/js/main.js"></script>
-
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
