@@ -66,7 +66,7 @@ The contact form uses Formspree. To set it up:
    ```html
    <form id="contact-form" action="YOUR_FORMSPREE_ENDPOINT" method="POST">
    ```
-1. The form will automatically send to `wvanheemstra@icloud.com`
+1. The form will automatically send to `willem.van.heemstra@resilience-inc.global`
 
 **Alternative**: Use [Formspark](https://formspark.io/) or [Formsubmit](https://formsubmit.co/) for similar functionality.
 
@@ -185,7 +185,7 @@ php -S localhost:8000
 
 - Completely free
 - No registration needed
-- Change action to: `https://formsubmit.co/wvanheemstra@icloud.com`
+- Change action to: `https://formsubmit.co/willem.van.heemstra@resilience-inc.global`
 - Add captcha with: `<input type="hidden" name="_captcha" value="true">`
 
 ## 🌍 Custom Domain (Optional)
@@ -249,7 +249,7 @@ This website is for Willem van Heemstra / Resilience Inc. Feel free to use this 
 
 For questions about this website:
 
-- Email: wvanheemstra@icloud.com
+- Email: willem.van.heemstra@resilience-inc.global
 - Create an issue in the GitHub repository
 
 ## 🎯 Next Steps

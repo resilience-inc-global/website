@@ -29,7 +29,7 @@
 1. Go to [formspree.io/register](https://formspree.io/register)
 1. Create account and verify email
 1. Click **+ New Form**
-1. Name: “Contact”, Email: `wvanheemstra@icloud.com`
+1. Name: “Contact”, Email: `willem.van.heemstra@resilience-inc.global`
 1. Copy your form endpoint (looks like: `formspree.io/f/abc123`)
 1. Edit `contact.html` on GitHub:
 - Click file → pencil icon
@@ -58,4 +58,4 @@ Your site is now live. Test the contact form to make sure emails come through.
 
 See **SETUP_GUIDE.md** for detailed instructions or **README.md** for technical documentation.
 
-**Email:** wvanheemstra@icloud.com
+**Email:** willem.van.heemstra@resilience-inc.global

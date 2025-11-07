@@ -163,7 +163,7 @@ If you have issues:
 
 - Check GitHub’s custom domain docs: docs.github.com/pages/configuring-a-custom-domain-for-your-github-pages-site
 - Contact your domain provider’s support
-- Email: wvanheemstra@icloud.com
+- Email: willem.van.heemstra@resilience-inc.global
 
 -----
 

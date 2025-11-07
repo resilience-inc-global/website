@@ -91,7 +91,7 @@ Already done in Step 1, Option B!
 
 1. Click **+ New Form** button
 1. Form name: “Resilience Inc Contact”
-1. Email: `wvanheemstra@icloud.com`
+1. Email: `willem.van.heemstra@resilience-inc.global`
 1. Click **Create Form**
 
 ### 4.3 Get Your Form Endpoint
@@ -175,7 +175,7 @@ git push
 1. Submit the form
 1. You should:
 - Be redirected to the thank you page
-- Receive an email at `wvanheemstra@icloud.com`
+- Receive an email at `willem.van.heemstra@resilience-inc.global`
 - See the submission in your Formspree dashboard
 
 **First submission only:** Formspree may ask you to confirm your email address.
@@ -391,7 +391,7 @@ If you need help:
 1. Check this guide again
 1. Review README.md
 1. Check GitHub repository Issues tab
-1. Email: wvanheemstra@icloud.com
+1. Email: willem.van.heemstra@resilience-inc.global
 
 -----
 
