@@ -153,8 +153,8 @@ Add the tracking code to **all three HTML files** just before the closing `</hea
 **In each file, find the `</head>` tag and add the code before it:**
 
 ```html
-    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>

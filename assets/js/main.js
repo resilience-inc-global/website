@@ -1,156 +1,158 @@
 // Resilience Inc - Main JavaScript
 
-document.addEventListener(‘DOMContentLoaded’, function() {
-// Mobile Navigation Toggle
-const hamburger = document.querySelector(’.hamburger’);
-const navMenu = document.querySelector(’.nav-menu’);
+document.addEventListener('DOMContentLoaded', () => {
+  // Mobile navigation toggle
+  const navToggle = document.querySelector('[data-nav-toggle]');
+  const navMenuMobile = document.querySelector('[data-nav-menu-mobile]');
+  const menuOpenIcon = navToggle?.querySelector('[data-menu-open]');
+  const menuCloseIcon = navToggle?.querySelector('[data-menu-close]');
 
-if (hamburger && navMenu) {
-    hamburger.addEventListener('click', function() {
-        navMenu.classList.toggle('active');
-        hamburger.classList.toggle('active');
-    });
-    
-    // Close menu when clicking outside
-    document.addEventListener('click', function(event) {
-        if (!hamburger.contains(event.target) && !navMenu.contains(event.target)) {
-            navMenu.classList.remove('active');
-            hamburger.classList.remove('active');
-        }
-    });
-    
-    // Close menu when clicking a link
-    const navLinks = document.querySelectorAll('.nav-menu a');
-    navLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            navMenu.classList.remove('active');
-            hamburger.classList.remove('active');
-        });
-    });
-}
+  const setMenuState = (isOpen) => {
+    if (!navToggle || !navMenuMobile) return;
 
-// Smooth scrolling for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        const href = this.getAttribute('href');
-        if (href !== '#' && href !== '') {
-            e.preventDefault();
-            const target = document.querySelector(href);
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        }
+    navMenuMobile.classList.toggle('hidden', !isOpen);
+    navToggle.setAttribute('aria-expanded', String(isOpen));
+    menuOpenIcon?.classList.toggle('hidden', isOpen);
+    menuCloseIcon?.classList.toggle('hidden', !isOpen);
+  };
+
+  if (navToggle && navMenuMobile) {
+    navToggle.addEventListener('click', (event) => {
+      event.stopPropagation();
+      const isOpen = navMenuMobile.classList.contains('hidden');
+      setMenuState(isOpen);
     });
-});
 
-// Pre-fill service field from URL parameter
-const urlParams = new URLSearchParams(window.location.search);
-const serviceParam = urlParams.get('service');
-const serviceSelect = document.getElementById('service');
+    document.addEventListener('click', (event) => {
+      const target = event.target;
+      if (
+        navMenuMobile.classList.contains('hidden') ||
+        navMenuMobile.contains(target) ||
+        navToggle.contains(target)
+      ) {
+        return;
+      }
 
-if (serviceParam && serviceSelect) {
-    // Map URL parameters to select values
+      setMenuState(false);
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') {
+        setMenuState(false);
+      }
+    });
+
+    navMenuMobile.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => setMenuState(false));
+    });
+  }
+
+  // Smooth scrolling for same-page links
+  const scrollLinks = document.querySelectorAll('[data-scroll-link]');
+  const currentPath = window.location.pathname.replace(/\/index\.html$/, '/');
+
+  scrollLinks.forEach((link) => {
+    const href = link.getAttribute('href');
+
+    if (!href || !href.startsWith('#')) return;
+
+    link.addEventListener('click', (event) => {
+      event.preventDefault();
+      const target = document.querySelector(href);
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        history.replaceState(null, '', `${currentPath}${href}`);
+      }
+    });
+  });
+
+  // Pre-fill service field from URL parameter
+  const urlParams = new URLSearchParams(window.location.search);
+  const serviceParam = urlParams.get('service');
+  const serviceSelect = document.getElementById('service');
+
+  if (serviceParam && serviceSelect) {
     const serviceMap = {
-        'security': 'security',
-        'cloud': 'cloud',
-        'devops': 'devops'
+      security: 'security',
+      cloud: 'cloud',
+      devops: 'devops',
     };
-    
-    if (serviceMap[serviceParam]) {
-        serviceSelect.value = serviceMap[serviceParam];
+
+    const mappedValue = serviceMap[serviceParam.toLowerCase()];
+    if (mappedValue) {
+      serviceSelect.value = mappedValue;
     }
-}
+  }
 
-// Form Handling
-const contactForm = document.getElementById('contact-form');
-const formStatus = document.getElementById('form-status');
-
-if (contactForm && formStatus) {
-    contactForm.addEventListener('submit', function(e) {
-        // Show loading state
-        const submitButton = contactForm.querySelector('button[type="submit"]');
-        const originalText = submitButton.textContent;
-        submitButton.textContent = 'Sending...';
+  // Form submission feedback
+  const contactForm = document.getElementById('contact-form');
+  if (contactForm) {
+    contactForm.addEventListener('submit', () => {
+      const submitButton = contactForm.querySelector('button[type="submit"]');
+      if (submitButton) {
+        submitButton.dataset.originalText = submitButton.textContent ?? '';
+        submitButton.textContent = 'Sending…';
         submitButton.disabled = true;
-        
-        // Formspree will handle the actual submission
-        // We just need to handle the UI feedback
-        
-        // Note: If using Formspree's AJAX submission instead of form post,
-        // you would handle it here. For now, we rely on Formspree's redirect.
+      }
     });
-}
+  }
 
-// Animate elements on scroll
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
+  // Animate elements on scroll
+  const animatedElements = document.querySelectorAll('[data-animate]');
 
-const observer = new IntersectionObserver(function(entries) {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-        }
+  if (animatedElements.length > 0) {
+    const animationObserver = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.remove('opacity-0', 'translate-y-6');
+            entry.target.classList.add('opacity-100', 'translate-y-0');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+
+    animatedElements.forEach((element, index) => {
+      element.classList.add(
+        'transition',
+        'duration-500',
+        'ease-out',
+        'transform',
+        'opacity-0',
+        'translate-y-6'
+      );
+      element.style.transitionDelay = `${Math.min(index * 60, 240)}ms`;
+      animationObserver.observe(element);
     });
-}, observerOptions);
+  }
 
-// Add animation to service cards
-const animateElements = document.querySelectorAll('.service-card, .process-step, .trust-item');
-animateElements.forEach(element => {
-    element.style.opacity = '0';
-    element.style.transform = 'translateY(20px)';
-    element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    observer.observe(element);
+  // Highlight active section in navigation (desktop)
+  const sections = document.querySelectorAll('main section[id]');
+
+  if (sections.length > 0) {
+    const highlightLinks = (id, isActive) => {
+      const links = document.querySelectorAll(`[data-scroll-link][href="#${id}"]`);
+      links.forEach((link) => {
+        link.classList.toggle('text-brand', isActive);
+        link.classList.toggle('text-slate-600', !isActive);
+        link.classList.toggle('font-semibold', isActive);
+      });
+    };
+
+    const sectionObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const id = entry.target.getAttribute('id');
+          if (!id) return;
+
+          highlightLinks(id, entry.isIntersecting && entry.intersectionRatio >= 0.5);
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    sections.forEach((section) => sectionObserver.observe(section));
+  }
 });
-
-// Add active state to navigation based on scroll position
-window.addEventListener('scroll', function() {
-    const sections = document.querySelectorAll('section[id]');
-    const scrollY = window.pageYOffset;
-    
-    sections.forEach(section => {
-        const sectionHeight = section.offsetHeight;
-        const sectionTop = section.offsetTop - 100;
-        const sectionId = section.getAttribute('id');
-        
-        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-            document.querySelectorAll('.nav-menu a[href*=' + sectionId + ']').forEach(link => {
-                link.classList.add('active');
-            });
-        } else {
-            document.querySelectorAll('.nav-menu a[href*=' + sectionId + ']').forEach(link => {
-                link.classList.remove('active');
-            });
-        }
-    });
-});
-
-});
-
-// Add CSS for active nav links dynamically if not in stylesheet
-const style = document.createElement(‘style’);
-style.textContent = `
-.nav-menu a.active {
-color: var(–primary-color);
-font-weight: 600;
-}
-
-.hamburger.active span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-}
-
-.hamburger.active span:nth-child(2) {
-    opacity: 0;
-}
-
-.hamburger.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(7px, -6px);
-}
-
-`;
-document.head.appendChild(style);

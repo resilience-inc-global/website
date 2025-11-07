@@ -48,7 +48,7 @@ Your site is now live. Test the contact form to make sure emails come through.
 
 - [ ] Add your professional photo to `assets/images/`
 - [ ] Update the placeholder photo in `index.html` (line 93)
-- [ ] Customize brand colors in `assets/css/style.css`
+- [ ] Customize brand colors in the Tailwind config snippet inside each HTML `<head>`
 - [ ] Test contact form
 - [ ] Share on LinkedIn!
 

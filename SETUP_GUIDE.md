@@ -204,24 +204,33 @@ git push
 **With this:**
 
 ```html
-<img src="assets/images/willem-profile.jpg" alt="Willem van Heemstra" style="border-radius: 50%; width: 250px; height: 250px; object-fit: cover;">
+<img src="assets/images/willem-profile.jpg" alt="Willem van Heemstra" class="h-64 w-64 rounded-full object-cover shadow-xl">
 ```
 
 ### 6.2 Update Branding Colors (Optional)
 
-1. Open `assets/css/style.css`
-1. Find lines 8-17 (CSS variables)
-1. Change the color codes to match your brand:
+Tailwind CSS handles all styling. Update the configuration snippet in the `<head>` of each HTML file to adjust colors, fonts, or plugins:
 
-```css
-:root {
-    --primary-color: #2563eb;    /* Your brand color */
-    --primary-dark: #1e40af;     /* Darker version */
-    --accent-color: #06b6d4;     /* Accent color */
-}
+```html
+<script>
+  tailwind.config = {
+    plugins: [tailwindcssForms],
+    theme: {
+      extend: {
+        colors: {
+          brand: {
+            DEFAULT: '#2563eb',
+            dark: '#1e40af',
+            light: '#3b82f6'
+          }
+        }
+      }
+    }
+  };
+</script>
 ```
 
-Use [coolors.co](https://coolors.co) to generate a color palette.
+Change the hex values to match your palette. You can also add additional keys (e.g. `secondary`, `accent`) and use them via Tailwind utility classes.
 
 ### 6.3 Update Service Pricing (If Needed)
 
@@ -339,11 +348,11 @@ In your domain provider’s DNS settings, add:
 - Verify images are in `assets/images/` folder
 - Check file paths in HTML
 
-### CSS not loading?
+### Styles not loading?
 
 - Hard refresh browser (Ctrl+Shift+R or Cmd+Shift+R)
-- Check file paths in HTML
-- Verify CSS file was uploaded
+- Confirm the Tailwind CDN script is present in the `<head>` of each HTML file
+- Check the browser console for network errors blocking the CDN
 
 -----
 
